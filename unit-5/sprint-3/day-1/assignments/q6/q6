@@ -1,0 +1,4 @@
+What if we call Java run() method directly instead start() method?
+
+The run method is just another method. If you call it directly, 
+then it will execute not in another thread, but in the current thread.

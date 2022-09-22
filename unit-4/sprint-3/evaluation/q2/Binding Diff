@@ -1,0 +1,103 @@
+Question 2:
+Briefly explain the difference between Early and Late Binding with examples
+
+Early binding and late binding are two concept releted to polymorphism.
+
+What is Early Binding?
+
+In early binding he class information is used to resolve method calling.early binding ocuurs at compile
+time .it is also knwon as the static binding.in this process the binding ocuurs beore the program actualy runs.
+overloading method are bonded using early binding
+
+Example:
+
+cal.java
+
+pakage com.masai
+
+public class Cal
+{
+	public int add(int x,int y)
+	{
+	return x+y;
+	}
+	
+	public double add(double x,double y)
+	{
+	return x+y;
+	}
+}
+-------------------------------------------------
+
+Main.java
+
+pakage com.masai
+
+public class Main
+{
+	public static void main(String[] args)
+	{
+	Cal c = new cal();
+	int ans1=cal.add(1,2);
+	
+	double ans2=cal.add(5.5,6.6);.
+	syso("int ans"+ans1);
+	syso("double ans":ans2);
+	
+	}
+======================================================================================================================================
+
+What is late Binding?
+
+In the late binding the object is to resolved method calling.late binding ocuures at runtime
+it is also known as dynamic binding.in this time the binding ocuures when program exution time.
+overrddin method are bonded using the late binding
+
+Example:
+
+Shape.java
+
+pakage com.masai
+
+Public class Shape
+{
+public void draw()
+{
+syso("Draw Shape");
+}
+}
+---------------------------------------
+
+
+circle.java
+pakage com.masai
+
+public class Circle extends Shape
+{
+Public void draw()
+{
+}
+syso("Draw circle");
+}	
+	
+}
+----------------------------------------
+
+Main.java
+
+Public Class Main
+{
+	public Static void main(String[] args)
+	{
+	Shape s;
+	s=new Shape();
+	s.draw();
+	
+	s= new Circle();
+	s.draw();
+	
+	
+	}
+
+}
+==========================================================================================

@@ -1,0 +1,51 @@
+Deadlock
+
+Synchronized keyword is used to make the class or method thread safe which meance
+only one thread can have lock of synchronized method and use it;other therad 
+have to wait till the lock releses and anyone of them aquice that lock
+
+Its is important to use if our program is running in multithreading evnvoirment
+wheretwo or more thread exucute simunteniusly but sometime it couse a problem 
+which is called Deadlock.
+
+Example:
+
+public class TestDeadlockExample1 {  
+  public static void main(String[] args) {  
+    final String resource1 = "sameer Bhavar";  
+    final String resource2 = "Anand Singh Yadav";  
+
+    Thread t1 = new Thread() {  
+      public void run() {  
+          synchronized (resource1) {  
+           System.out.println("Thread 1: locked resource 1");  
+  
+           try { Thread.sleep(100);} catch (Exception e) {}  
+  
+           synchronized (resource2) {  
+            System.out.println("Thread 1: locked resource 2");  
+           }  
+         }  
+      }  
+    };  
+  
+  
+    Thread t2 = new Thread() {  
+      public void run() {  
+        synchronized (resource2) {  
+          System.out.println("Thread 2: locked resource 2");  
+  
+          try { Thread.sleep(100);} catch (Exception e) {}  
+  
+          synchronized (resource1) {  
+            System.out.println("Thread 2: locked resource 1");  
+          }  
+        }  
+      }  
+    };  
+  
+      
+    t1.start();  
+    t2.start();  
+  }  
+}       

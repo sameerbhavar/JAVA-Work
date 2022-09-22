@@ -1,0 +1,22 @@
+
+1)What is exception handling in java, Write the hierarchy of Exception class and, Mention some
+of the predefined Exception classes at least 5, and the reason when those exception class
+object is generated in our application.
+
+what is exception Handling?
+Gracefull/normal termination of our application:- if the last line of the 
+main method executed successfully then we can say that normal termination happens.
+if last statement of the main method is executed and our application gets terminated then we can say that abnormal termination occurs.
+The main objective of exception handling is gracefull termination of our application.
+Exception always occurs at runtime, it never occurs at compile time.
+
+Exception Class:
+Exception class is the super class/base class of all other  exception  classes.
+above all the classes belongs to java.lang package.
+as we know that super class ref can point to the child class obj, so we can take only one catch block that can handle any type of exception class obj.
+
+1)ArithmeticException:Error or mathmatic issue
+2)ArrayIndexOutOfBoundExceptions:When loop get out
+3)ClassNotFoundExceptions:if class not found
+4)Null pointor Exception:if pass null value
+5)Default Exception

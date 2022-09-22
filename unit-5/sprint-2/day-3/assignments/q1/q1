@@ -1,0 +1,87 @@
+Write down some predefined Functional interfaces in the java library at least 4
+interfaces, with their methods.
+
+java.lang.Comparable : public int compareTo(Object obj);
+
+java.util.Comparator : public int compare(Object obj1, Object obj2);
+
+java.lang.Iterable : public Iterator iterator();
+
+java.lang.Runnable : public void run();
+
+
+***Note: with the help of FI we achive FP in java using Lambda expression.
+
+
+example:
+
+Intr.java:
+----------
+
+package com.masai;
+
+@FunctionalInterface
+public interface Intr {
+	
+	void sayHello(String name);
+	
+}
+
+
+IntrImpl.java:
+-----------------
+
+package com.masai;
+
+public class IntrImpl implements Intr{
+
+	@Override
+	public void sayHello(String name) {
+		
+		System.out.println("Welcome "+name);
+		
+	}
+
+}
+
+
+Demo.java:
+--------------
+
+package com.masai;
+
+public class Demo{
+	
+	public static void main(String[] args) {
+		
+		//using a external or seperate class
+		Intr i1= new IntrImpl();
+		i1.sayHello("Ravi");
+		
+		//using Annonymous inner class
+		//we can use Annonymous inner class without a FI also
+		Intr i2= new Intr() {
+
+			@Override
+			public void sayHello(String name) {
+				System.out.println("Welcome using Annonymous inner class" +name);
+				
+			}
+			
+		};
+		
+		i2.sayHello("Amit");
+		
+		
+		//using Lambda expression:
+		
+		Intr i3= name -> System.out.println("Welcome Using LE "+name);
+		
+		i3.sayHello("Ram");
+		
+		
+			
+		
+	}
+			
+}

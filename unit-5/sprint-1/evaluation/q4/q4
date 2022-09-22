@@ -1,0 +1,34 @@
+public class CheckOutput {
+public static void main(String args[])
+{
+	try
+	{
+		System.out.print("A");
+		int num = 99/0;
+		System.out.print("B");
+	}
+	catch(ArithmeticException ex)
+	{
+		System.out.print("C");
+	}
+		catch(Exception ex)
+	{
+		System.out.print("D");
+	}
+		System.out.print("E");
+	}
+}
+
+Answer:
+Note:In main Method Declaration their is Syntax error (String args[])
+main Method should be (String[] args) so change this.
+-----------------------------------------------------
+In the Given Program output is ACE
+
+Exp:
+First Default Statement A will be print in try Block;
+After That Catch Block will execute because try block have error.
+In the Catch Block Arithmatic exception will give output As C;
+And Last our runner will print E because the Exepetion ex Catch block never Execute;
+ 
+ 

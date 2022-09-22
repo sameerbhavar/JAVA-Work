@@ -1,0 +1,66 @@
+1)Why String is immutable in java and what is the difference between String and String Builder? And Write
+some of the methods of String class at least 5 with example.
+
+answer->
+The string immutable in java becouse of the security,synchronization and concurency,chching and class loading
+The reson of making string immutable and to not allow others to extend it.
+
+Diffrance Between string and string bulider
+answer->
+A string is immutable in java.but stringBulider is mutable in java.
+
+String Methods
+1) string length
+ public static void main(String[] args)
+{
+String str="sameer Bhavar";
+System.out.println(str.length);
+}
+
+2)string concatnation
+
+public static void main(String[] args)
+{
+String str="sameer";
+
+String str1="Bhavar";
+System.out.println(str.concat(str1);
+}
+
+3)String char Array
+public static void main(String[] args)
+{
+String str="sameer";
+
+char[] chars= str.toCharArray();
+
+}
+
+4)String charAt
+
+public static void main(String[] args)
+{
+String str="sameer";
+
+System.out.println(str.charAt(1));
+
+}
+
+5)String compare
+public static void main(String[] args)
+{
+String str1="sameer";
+String str2="sameer";
+
+System.out.println(str1.compareTo(str2);
+
+}
+######################################################################################
+
+Q1->B What is the difference between equals method and == operator in java? And what will be the output of the
+following code snippets and giving proper explanation.
+ answer->
+ == Should be used during reference comparison.== checks if both references points to same location or not.
+ equals() method should be used for content comparison 
+ 
+ 

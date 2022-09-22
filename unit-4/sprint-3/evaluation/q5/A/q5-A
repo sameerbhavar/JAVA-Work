@@ -1,0 +1,19 @@
+Question 5:
+a) Does the below code compile successfully? If not, why?
+
+
+interface A{
+int i = 111;
+}
+
+class B implements A{
+void methodB(){
+i = 222;
+}
+}
+
+Answer:
+
+No ,this program cannot compile successFully
+Because If we define any variable inside the interface this variable default public static final.
+Thats why we cannot Reassign the value.

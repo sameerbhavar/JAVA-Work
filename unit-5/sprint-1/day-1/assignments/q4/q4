@@ -1,0 +1,44 @@
+
+this concept is also introduced in java 1.5v.
+the main objective of Generics is to achieve typesafty.
+
+It makes the code stable by detecting the bugs at compile time.
+
+Generics concept mostly used with collection f/w related classes, but we can 
+apply the generics concept without collection f/w also.
+
+Note: Generics concept is not applicable with primitive data types, it supports
+only the obejcts.
+
+we can create our own generic classes or generic methods. and that class or 
+method can work with any kind of data.
+
+
+adv of generics:
+-------------------
+1.type checking at compile time.
+2.get rid of downcasting problem.
+
+with this our code will become bug(most of them detected at compile time) free and more stable.
+
+example :
+
+MyGen.java:
+-----------------
+
+package com.masai;
+
+public class MyGen<T> {
+	
+	T data;
+	
+	public MyGen(T data) {
+		this.data=data;
+	}
+	
+	public T getData() {
+		return data;
+	}
+
+}
+
